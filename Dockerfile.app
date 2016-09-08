@@ -1,7 +1,10 @@
 FROM node:4.5.0
 
 RUN apt-get update
-RUN npm install -g gulp karma-cli jasmine-core bower node-sass
+RUN apt-get -y install build-essential chrpath libssl-dev libxft-dev
+RUN apt-get -y install libfreetype6 libfreetype6-dev
+RUN apt-get -y install libfontconfig1 libfontconfig1-dev
+RUN npm install -g gulp karma-cli jasmine-core bower node-sass phantomjs-prebuilt
 RUN npm install -g angular-cli typescript
 
 
@@ -17,5 +20,3 @@ RUN bower install
 COPY . /usr/src/app
 
 EXPOSE 3000 3001
-
-CMD [ "gulp", "serve"]
