@@ -9,6 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.app
+    command: bash -c "gulp test && gulp serve"
     ports:
       - "8000:3000"
       - "8001:3001"
