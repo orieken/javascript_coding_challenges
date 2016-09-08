@@ -1,0 +1,16 @@
+FROM node:4.5.0
+
+RUN apt-get update
+RUN npm install -g gulp karma-cli jasmine-core bower node-sass protractor
+
+RUN mkdir -p /usr/src/e2e
+WORKDIR /usr/src/e2e
+
+COPY package.json /usr/src/e2e
+COPY bower.json /usr/src/e2e
+COPY .bowerrc /usr/src/e2e
+COPY .yo-rc.json /usr/src/e2e
+COPY protractor.conf.js /usr/src/e2e
+RUN npm install
+
+COPY . /usr/src/e2e
