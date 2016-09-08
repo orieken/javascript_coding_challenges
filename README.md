@@ -11,6 +11,11 @@
 * mocha tests: ` gulp mocha `
 * jasmine specs: ` gulp spec `
 * protractor tests: ` gulp e2e ` or ` gulp protractor ` will launch the app if its not running already
+  * you might need to comment this line in protractor.conf.js to run locally:
+  ```Javascript
+   seleniumAddress: (process.env.GRID_URL || 'http://localhost:4444/wd/hub'),
+  ```
+
 
 ### using Docker
 * run: ` docker-compose up `
