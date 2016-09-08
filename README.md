@@ -2,6 +2,17 @@
 
 ## Getting Started
 
+### running the project
+
+* install some global packages run: ` npm install -g gulp karma-cli jasmine-core bower node-sass phantomjs-prebuilt`
+* install the app deps run: ` npm install ` and ` bower install ` if you need it
+* serve the app: ` gulp serve `
+* unit tests: ` gulp test `
+* mocha tests: ` gulp mocha `
+* jasmine specs: ` gulp spec `
+* protractor tests: ` gulp e2e ` or ` gulp protractor ` will launch the app if its not running already
+
+### using Docker
 * run: ` docker-compose up `
   * web container will be served at <docker machine ip>:8000
   * chrome standalone will be available
