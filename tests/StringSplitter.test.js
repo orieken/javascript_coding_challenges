@@ -52,5 +52,9 @@
       var expectedString = 'Four\nscore\nand\nseven\nyears\nago our\nfathers\nbrought\nforth\nupon\nthis\ncontine\nnt';
       expect(StringSplitter.chop(initialString, 7)).to.equal(expectedString);
     });
+
+    xit('a dog', function(){
+      expect(StringSplitter.chop('a dog', 5)).to.equal('a dog');
+    });
   });
 })();
